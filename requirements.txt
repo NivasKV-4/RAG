@@ -1,45 +1,69 @@
-# Core RAG Dependencies
+
+
+
+# Core RAG + Vector Search
+
 langchain==0.1.0
 langchain-community==0.0.20
-langchain-openai==0.0.5
-openai==1.0.0
-google-generativeai==0.3.0
+langchain-huggingface==0.1.0
 faiss-cpu==1.7.4
+sentence-transformers==2.2.2
 tiktoken==0.5.1
 
+# Local LLM (FLAN-T5)
+transformers==4.35.2
+accelerate==0.25.0
+torch==2.1.0
+
+
 # Document Processing
-pypdf==3.17.0
+
+pypdf==4.0.0
 python-docx==1.1.0
 
-# Aviation Data
-metar==1.11.0
-requests==2.31.0
-# SimConnect==0.4.26  # Commented out - only install on Windows with MSFS
 
-# Voice Interface
+# Aviation & Weather APIs
+
+requests==2.31.0
+python-dateutil==2.8.2
+
+# METAR decoding library (optional)
+metar==1.11.0
+
+# Microsoft Flight Simulator (SimConnect)
+# SimConnect cannot be installed on non-Windows machines
+# Uncomment only if using MSFS:
+# SimConnect==0.4.26
+
+
+# Voice Interface (Speech-to-Text)
+
 openai-whisper==20231117
 sounddevice==0.4.6
 wavio==0.0.7
-pyttsx3==2.90
-# pyaudio==0.2.13  # Alternative audio backend if sounddevice has issues
+ffmpeg-python==0.2.0   # wrapper (requires system FFmpeg installed)
 
-# Evaluation Metrics
+# Optional Text-to-Speech
+pyttsx3==2.90
+
+# Evaluation & Metrics
+
 rouge-score==0.1.2
-bert-score==0.3.13
 rank-bm25==0.2.2
+scikit-learn==1.3.2
 pandas==2.1.0
 numpy==1.24.0
 scipy==1.11.0
 matplotlib==3.8.0
 seaborn==0.13.0
 
-# UI
+
+# UI / App
+
 streamlit==1.28.0
 
+
 # Utilities
+
 python-dotenv==1.0.0
 tqdm==4.66.0
-
-# Optional: For advanced features
-# transformers==4.35.0  # If using custom BERT models
-# torch==2.1.0  # Required for some bert-score features
