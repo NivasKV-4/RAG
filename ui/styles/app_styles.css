@@ -1,0 +1,216 @@
+/* ============================
+   FlightLens – Glass Cockpit UI
+   ============================ */
+
+body, .stApp {
+    background: radial-gradient(circle at top, #0b1b2b 0%, #050911 45%, #02040a 100%) !important;
+    color: #e5f4ff !important;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section.main > div {
+    padding-top: 1rem;
+}
+
+h1, h2, h3, h4 {
+    color: #eaf7ff !important;
+    letter-spacing: 0.05em;
+}
+
+p, label, span, .markdown-text-container {
+    color: #c7d9ec !important;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #0ff, #0a84ff25, transparent);
+    margin: 0.8rem 0 1.2rem 0;
+}
+
+/* Containers */
+.block-container {
+    padding-top: 1rem !important;
+}
+
+.stMarkdown, .stTextArea, .stTextInput, .stSelectbox, .stMetric, .stAlert {
+    border-radius: 12px !important;
+}
+
+[class^="stMarkdown"] > div,
+[class^="stTextInput"] > div,
+[class^="stTextArea"] > div,
+[data-testid="stMetricValue"] {
+    background: linear-gradient(145deg, #07121f 0%, #101b2b 60%, #060b16 100%);
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 255, 255, 0.12);
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: linear-gradient(90deg, #06121f 0%, #071829 60%) !important;
+    color: #e5f4ff !important;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.25);
+}
+.streamlit-expanderContent {
+    background: rgba(2, 8, 20, 0.9) !important;
+}
+
+/* Tabs */
+[data-testid="stTabs"] button {
+    background: transparent !important;
+    border-bottom: 2px solid transparent !important;
+    color: #8fa9c9 !important;
+    font-weight: 500;
+}
+
+[data-testid="stTabs"] button[aria-selected="true"] {
+    border-bottom: 2px solid #00d9ff !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar */
+.sidebar .sidebar-content, .stSidebar {
+    background: linear-gradient(180deg, #050d18 0%, #020610 100%) !important;
+    border-right: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+.stSidebar h1, .stSidebar h2, .stSidebar h3 {
+    color: #eaf7ff !important;
+}
+
+.stSidebar .stButton button {
+    width: 100% !important;
+}
+
+/* Buttons */
+.stButton button {
+    border-radius: 999px !important;
+    padding: 0.45rem 1.25rem !important;
+    border: 1px solid rgba(0, 255, 255, 0.35) !important;
+    background: radial-gradient(circle at top, #0affff40 0, #0a84ff 40%, #06101e 100%) !important;
+    color: #eaf7ff !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem !important;
+    box-shadow: 0 0 18px rgba(0, 200, 255, 0.25);
+    transition: all 0.15s ease-out;
+}
+
+.stButton button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 26px rgba(0, 255, 255, 0.45);
+    border-color: rgba(0, 255, 255, 0.7) !important;
+}
+
+button[kind="secondary"] {
+    background: linear-gradient(145deg, #0c1730, #050b17) !important;
+    border-color: rgba(0, 255, 255, 0.2) !important;
+}
+
+/* Inputs */
+input[type="text"], textarea, .stTextInput input, .stTextArea textarea {
+    background: rgba(3, 12, 26, 0.9) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    color: #eaf7ff !important;
+    font-size: 0.9rem !important;
+}
+
+input[type="text"]:focus, .stTextInput input:focus, textarea:focus {
+    outline: none !important;
+    border-color: #00f3ff !important;
+    box-shadow: 0 0 0 1px rgba(0, 243, 255, 0.4);
+}
+
+label, .stRadio label, .stCheckbox label {
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #8fa9c9 !important;
+}
+
+.stCheckbox > label > span {
+    color: #c2d6f2 !important;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background: radial-gradient(circle at top, #07172a 0%, #050b16 50%, #02040a 100%) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 191, 0, 0.45);
+    padding: 0.5rem 0.75rem !important;
+    box-shadow: 0 0 15px rgba(255, 191, 0, 0.2);
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ffd27a !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.3rem !important;
+    color: #fff7e5 !important;
+}
+
+/* Answer & Sources */
+.answer-block {
+    background: radial-gradient(circle at top left, #053452 0%, #050b16 45%, #02040a 100%);
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    padding: 1rem 1.2rem;
+    box-shadow: 0 0 18px rgba(0, 200, 255, 0.25);
+}
+
+.answer-block p {
+    color: #eaf7ff !important;
+    font-size: 0.95rem;
+}
+
+.sources-block {
+    background: rgba(3, 12, 26, 0.95);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    padding: 0.5rem 0.8rem;
+}
+
+.sources-block pre, .sources-block code, .sources-block textarea {
+    background: transparent !important;
+    color: #d0e5ff !important;
+    font-size: 0.8rem;
+}
+
+.sources-block .stText {
+    font-family: "Consolas", "JetBrains Mono", monospace;
+}
+
+/* Alerts */
+.stSuccess {
+    background: rgba(0, 170, 120, 0.12) !important;
+    border-left: 3px solid #00ff9d !important;
+}
+.stInfo {
+    background: rgba(0, 143, 255, 0.12) !important;
+    border-left: 3px solid #00c2ff !important;
+}
+.stWarning {
+    background: rgba(255, 180, 0, 0.12) !important;
+    border-left: 3px solid #ffcc33 !important;
+}
+.stError {
+    background: rgba(255, 40, 40, 0.12) !important;
+    border-left: 3px solid #ff5555 !important;
+}
+
+/* Footer */
+footer {
+    background: transparent !important;
+    color: #62779a !important;
+}
+
+footer a {
+    color: #00f3ff !important;
+}

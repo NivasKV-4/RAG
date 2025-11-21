@@ -1,0 +1,42 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Large/Generated Data Files
+FlightLens/models/
+FlightLens/evaluation/
+FlightLens/data/processed/
+*.faiss
+*.pkl
+*.wav
+
+# Environment variables
+.env
+
+# Build/Output
+dist/
+build/
+*.egg-info/
+
+# Test caches
+.coverage
+.pytest_cache/

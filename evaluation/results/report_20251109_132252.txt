@@ -1,0 +1,45 @@
+======================================================================
+FlightLens RAG System - Evaluation Report
+Generated: 2025-11-09 13:38:22
+======================================================================
+
+SUMMARY STATISTICS
+----------------------------------------------------------------------
+avg_response_time................................. 54.7030
+median_response_time.............................. 19.8870
+std_response_time................................. 62.5875
+source_grounding_rate............................. 0.0588
+uncertainty_rate.................................. 0.0000
+avg_rouge1_f1..................................... 0.1271
+avg_rougeL_f1..................................... 0.0961
+avg_token_overlap_f1.............................. 0.1559
+exact_match_accuracy.............................. 0.0000
+
+
+SAMPLE RESPONSES
+----------------------------------------------------------------------
+
+[Example 1]
+Q: What are the immediate steps for an engine fire during flight?
+A: shut off the fuel supply to the engine by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position. The ignition switch should be left ON in ord...
+Time: 88.16s | Grounded: False
+
+[Example 2]
+Q: How do you handle electrical fire in flight?
+A: 1. Turning the electrical master switch OFF. 2. Turning all individual electrical switches OFF. 3. Turning the master switch back ON. 4. Selecting electrical switches that were ON before the fire indi...
+Time: 194.16s | Grounded: False
+
+[Example 3]
+Q: What is the procedure for engine failure during takeoff?
+A: A takeoff or go-around is the most critical time to suffer an engine failure. The airplane will be slow, close to the ground, and may even have landing gear and flaps extended. An engine failure befor...
+Time: 48.43s | Grounded: False
+
+[Example 4]
+Q: How should a pilot respond to carburetor ice indication?
+A: full carburetor heat should be applied immediately, and it should be left in the ON position until the pilot is certain that all the ice has been removed. If detected, full carburetor heat should be a...
+Time: 101.03s | Grounded: False
+
+[Example 5]
+Q: What are the steps for emergency descent?
+A: high drag, high airspeed procedures requiring a specific airplane configuration (such as power to idle, propellers forward, landing gear extended, and flaps retracted), and a specific emergency descen...
+Time: 20.86s | Grounded: False

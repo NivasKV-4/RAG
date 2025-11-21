@@ -1,0 +1,45 @@
+# Core RAG Dependencies
+langchain==0.1.0
+langchain-community==0.0.20
+langchain-openai==0.0.5
+openai==1.0.0
+google-generativeai==0.3.0
+faiss-cpu==1.7.4
+tiktoken==0.5.1
+
+# Document Processing
+pypdf==3.17.0
+python-docx==1.1.0
+
+# Aviation Data
+metar==1.11.0
+requests==2.31.0
+# SimConnect==0.4.26  # Commented out - only install on Windows with MSFS
+
+# Voice Interface
+openai-whisper==20231117
+sounddevice==0.4.6
+wavio==0.0.7
+pyttsx3==2.90
+# pyaudio==0.2.13  # Alternative audio backend if sounddevice has issues
+
+# Evaluation Metrics
+rouge-score==0.1.2
+bert-score==0.3.13
+rank-bm25==0.2.2
+pandas==2.1.0
+numpy==1.24.0
+scipy==1.11.0
+matplotlib==3.8.0
+seaborn==0.13.0
+
+# UI
+streamlit==1.28.0
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.66.0
+
+# Optional: For advanced features
+# transformers==4.35.0  # If using custom BERT models
+# torch==2.1.0  # Required for some bert-score features
