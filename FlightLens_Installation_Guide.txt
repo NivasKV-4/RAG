@@ -1,0 +1,77 @@
+FlightLens – Installation Guide
+---------------------------------
+
+This guide explains how to set up and run the FlightLens RAG AI Assistant on your local machine.
+
+System Requirements
+-------------------
+- OS: Windows 10/11
+- Python: 3.10 or 3.11
+- RAM: 8 GB minimum (16 GB recommended)
+- GPU: Not required (Whisper & MPNet run on CPU)
+
+1. Clone the Repository
+-----------------------
+    git clone https://github.com/NivasKV-4/RAG/tree/dev
+    cd FlightLens
+
+2. Create & Activate Virtual Environment
+----------------------------------------
+    python -m venv .venv
+    .venv\Scripts\activate
+
+3. Install Requirements
+-----------------------
+    pip install --upgrade pip
+    pip install -r requirements.txt
+
+4. Install FFmpeg (Required for Whisper Voice Input)
+----------------------------------------------------
+Download from: https://www.gyan.dev/ffmpeg/builds/
+Extract to: C:\ffmpeg
+
+Add FFmpeg to PATH:
+    - Open System Environment Variables
+    - Add: C:\ffmpeg\bin
+
+Verify:
+    ffmpeg -version
+
+
+5. Create .env File
+-------------------
+Create a `.env` file in the project root:
+
+    EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2
+    FAISS_INDEX_PATH=data/processed/faiss_index
+    CHUNK_FILE=data/processed/chunks.jsonl
+
+
+6. Build the FAISS Vector Store
+-------------------------------
+    python src/rag/embed_faiss.py
+
+
+7. Run the Streamlit App
+------------------------
+    streamlit run ui/app.py
+
+
+8. Run Evaluation (Optional)
+----------------------------
+    python src/evaluate/run_eval.py
+
+
+9. (Optional) Enable Voice Mode
+-------------------------------
+Requires:
+- whisper
+- sounddevice
+- wavio
+- pyttsx3
+- ffmpeg
+
+
+10. (Optional) MSFS SimConnect Telemetry
+----------------------------------------
+If using Microsoft Flight Simulator, install the SimConnect SDK.
